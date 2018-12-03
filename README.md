@@ -16,9 +16,9 @@
 3. 当所有线程池处于空闲状态,且队列中无任务存在,工作流结束。
 
 # 目录
-command - 命令目录
-framework - 框架代码
-projects - 项目代码, 每个项目下的pages 文件夹存放数据采集相关代码, 而spiders 文件夹存放其他流程代码
+* command - 命令目录
+* framework - 框架代码
+* projects - 项目代码, 每个项目下的pages 文件夹存放数据采集相关代码, 而spiders 文件夹存放其他流程代码
 
 # 运行
 python command/run.py projects/demo/spiders/china_nba.py
