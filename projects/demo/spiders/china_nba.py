@@ -8,17 +8,17 @@ import gevent
 class SchedulerLive(object):
 
     # 不使用并发的执行方式
-    # def main(self):
-    #     sched = SchedulerLive()
-    #     page = china_nba.NewsList()
-    #     page2 = china_nba.NewsDetail()
-    #
-    #     reses = page.p_news(page.fetch())
-    #     for i in reses:
-    #         try:
-    #             sched.save_cover(page2.p_news(page2.fetch(page.is_news_exists(i))))
-    #         except chains.StopExec:
-    #             continue
+    def main(self):
+        sched = SchedulerLive()
+        page = china_nba.NewsList()
+        page2 = china_nba.NewsDetail()
+    
+        reses = page.p_news(page.fetch())
+        for i in reses:
+            try:
+                sched.save(page2.p_news(page2.fetch(i)))
+            except chains.StopExec:
+                continue
 
     def main(self):
         self.chain = chain = chains.Chain()
